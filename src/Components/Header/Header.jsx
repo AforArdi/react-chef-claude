@@ -5,7 +5,7 @@ const Header = () => {
         <div>
             <header className='flex items-center justify-center gap-2 py-6 border'>
                 <img src={ChefClaudeIcon} alt="ChefClaudeIcon" />
-                <h1 className='text-[32px]'>Chef Claude</h1>
+                <h1 className='text-[33px]'>Chef Claude</h1>
             </header>
         </div>
      );
