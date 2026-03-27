@@ -3,6 +3,7 @@ import React from "react";
 import { FiPlusCircle } from "react-icons/fi";
 import ClaudeRecipe from "../ClaudeRecipe/ClaudeRecipe";
 import IngredientsList from "../IngredientsList/IngredientsList";
+import Form from "../Form/Form";
 
 const Main = () => {
     const [inputValue, setInputValue] = useState('');
@@ -40,23 +41,15 @@ const Main = () => {
         <div>
             <main className="max-w-2xl mx-auto w-full px-4 mt-8">
                 {/* onSubmit={handleSubmit} inside form */}
-                <form action={addIngredient} className="flex items-center justify-center gap-5">
-                    <input 
-                    type="text" 
-                    name="ingredient"
-                    placeholder="e.g. oregano" 
-                    className="input input-bordered join-item"
-                    // value={inputValue} don't need this when using the action, and formData method
-                    onChange={(e)=>setInputValue(e.target.value)}
-                    />
-                    <button type="submit" className="btn btn-neutral flex items-center gap-1">
-                        <FiPlusCircle></FiPlusCircle> Add ingredient
-                    </button>
-                </form>
+                <Form
+                addIngredient={addIngredient}
+                setInputValue={setInputValue}
+                ></Form>
 
                 {ingredients.length > 0 && <IngredientsList 
                 ingredients={ingredients}
-                handleGetRecipeBtn={handleGetRecipeBtn}                ></IngredientsList>}
+                handleGetRecipeBtn={handleGetRecipeBtn}
+                ></IngredientsList>}
 
                 {recipeShown && <ClaudeRecipe></ClaudeRecipe>}
             </main>
