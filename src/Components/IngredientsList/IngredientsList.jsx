@@ -1,4 +1,6 @@
-const IngredientsList = () => {
+import Ingredients from "../Main/Ingredients/Ingredients";
+
+const IngredientsList = ({ingredients, handleGetRecipeBtn}) => {
     return ( 
         <section className="w-full mt-8">
             <h2 className="font-semibold text-2xl">Ingredients on hand:</h2>
@@ -12,6 +14,7 @@ const IngredientsList = () => {
                     })
                 }
             </div>
+
             {ingredients.length > 3 && <div className="flex justify-between items-center bg-[#6b728028] p-6 rounded-md mt-6">
                 <div>
                     <p className="text-[20px] font-semibold">Ready for a recipe?</p>
@@ -19,6 +22,7 @@ const IngredientsList = () => {
                 </div>
                 <button onClick={handleGetRecipeBtn} className="btn bg-[#D17557] text-white">Get a recipe</button>
             </div>}
+
         </section>
      );
 }

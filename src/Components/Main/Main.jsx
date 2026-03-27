@@ -1,7 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import { FiPlusCircle } from "react-icons/fi";
-import Ingredients from "./Ingredients/Ingredients";
 import ClaudeRecipe from "../ClaudeRecipe/ClaudeRecipe";
 import IngredientsList from "../IngredientsList/IngredientsList";
 
@@ -33,7 +32,6 @@ const Main = () => {
         if(newIngredient.trim() === ''){
             return;
         }
-
         setIngredients(prevIngredients=> [...prevIngredients, newIngredient]);
         // setInputValue('');
     }
@@ -56,11 +54,13 @@ const Main = () => {
                     </button>
                 </form>
 
-                {ingredients.length > 0 && <IngredientsList></IngredientsList>}
+                {ingredients.length > 0 && <IngredientsList 
+                ingredients={ingredients}
+                handleGetRecipeBtn={handleGetRecipeBtn}                ></IngredientsList>}
 
                 {recipeShown && <ClaudeRecipe></ClaudeRecipe>}
             </main>
-            
+
         </div>
      );
 }
