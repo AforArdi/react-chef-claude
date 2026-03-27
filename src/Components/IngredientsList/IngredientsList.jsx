@@ -1,6 +1,6 @@
 import Ingredients from "../Main/Ingredients/Ingredients";
 
-const IngredientsList = ({ingredients, handleGetRecipeBtn}) => {
+const IngredientsList = ({ingredients, getRecipeBtn}) => {
     return ( 
         <section className="w-full mt-8">
             <h2 className="font-semibold text-2xl">Ingredients on hand:</h2>
@@ -20,7 +20,7 @@ const IngredientsList = ({ingredients, handleGetRecipeBtn}) => {
                     <p className="text-[20px] font-semibold">Ready for a recipe?</p>
                     <p className="text-[16px]">Generate a recipe from your list of ingredients.</p>
                 </div>
-                <button onClick={handleGetRecipeBtn} className="btn bg-[#D17557] text-white">Get a recipe</button>
+                <button onClick={getRecipeBtn} className="btn bg-[#D17557] text-white">Get a recipe</button>
             </div>}
 
         </section>

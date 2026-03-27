@@ -1,16 +1,36 @@
-# React + Vite
+# 🍳 Chef Gemini - AI Recipe Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chef Gemini is a React-based web application that helps users decide what to cook based on the ingredients they already have. By leveraging the **Google Gemini API**, the app generates creative, formatted recipes instantly.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+Check out the live site: [Chef Gemini Live](https://chef-gemini-react.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **Add Ingredients:** Quickly list the items you have in your pantry.
+- **AI-Powered Recipes:** Uses Google’s `gemini-1.5-flash` model to suggest cooking instructions.
+- **Markdown Support:** Recipes are rendered with clear headings and lists using `react-markdown`.
+- **Responsive Design:** Built with Tailwind CSS for a smooth experience on all devices.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Tailwind CSS
+- **Icons:** React Icons
+- **AI Integration:** Google Generative AI SDK
+- **Environment Management:** Vite (for secure API key handling via `.env`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 What I Learned
+This project was a great way to practice **Intermediate React** concepts:
+- Handling forms using the modern `formData` approach.
+- Conditional rendering of components based on state.
+- Managing environment variables to keep API keys secure.
+- Integrating third-party AI SDKs into a frontend workflow.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎓 Learn Like I Do
+I built this project while taking the **Intermediate React** course on **Scrimba**. Their interactive code-in-browser player is honestly the best way to learn web development.
+
+🔥 **Want to join?** Use my link below to get **20% OFF** your Scrimba subscription:
+👉 [Get 20% Off Scrimba Here!](https://scrimba.com/?via=u436602a)
+
+---
+*Developed as part of my 180-day MERN Stack journey.*
