@@ -1,6 +1,5 @@
 import { useState } from "react";
 import React from "react";
-import { FiPlusCircle } from "react-icons/fi";
 import ClaudeRecipe from "../ClaudeRecipe/ClaudeRecipe";
 import IngredientsList from "../IngredientsList/IngredientsList";
 import Form from "../Form/Form";
@@ -38,6 +37,14 @@ const Main = () => {
         setIngredients(prevIngredients=> [...prevIngredients, newIngredient]);
         // setInputValue('');
     }
+    // for useRef -> need notes on this, unclear
+    const recipeSection = React.useRef(null);
+    // console.log(recipeSection);
+    React.useEffect(()=>{
+        if (recipe !== '' && recipeSection.current !== null){
+            recipeSection.current.scrollIntoView({behavior: 'smooth'})
+        }
+    }, [recipe])
 
     return ( 
         <div>
@@ -51,6 +58,7 @@ const Main = () => {
                 {ingredients.length > 0 && <IngredientsList 
                 ingredients={ingredients}
                 getRecipeBtn={getRecipeBtn}
+
                 ></IngredientsList>}
 
                 {recipe && <ClaudeRecipe recipe={recipe}></ClaudeRecipe>}
